@@ -1,8 +1,11 @@
 class PlacesController < ApplicationController
 	def index
 		@places = Place.all;
+		@places = Place.paginate(:page => params[:page], :per_page => 10);
 	end
-	def index
-	@tasks = Task.search(params[:term], params[:page]);
+
+	def new
+		@place = Place.new
 	end
+
 end
