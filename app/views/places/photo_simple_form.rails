@@ -1,4 +1,4 @@
-	<div class="clear"></div>
+<div class="clear"></div>
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
 	<%= f.input :picture %>
 	<%= f.input :message %>
