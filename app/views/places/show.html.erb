@@ -33,12 +33,11 @@
 
   <br />
 
-
-
-
 	<div class="float-right">
 	<% if current_user && current_user == @place.user %>
-			<%= link_to 'Add a Photo', place_photos_path(@place), class: 'btn btn-primary' %>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="photo-modal">
+			Add a Photo
+			</button>
 			<%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
 			<%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger' %>
 	<% end %>
@@ -78,6 +77,9 @@
     </div>
   </div>
 </div>
+
+
+<!-- Photo modal -->
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
