@@ -53,7 +53,7 @@
 <br />
 <br />
 
-<!-- Modal -->
+<!-- Comment Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -99,24 +99,11 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
         </div>
-
       <% end %>
     </div>
   </div>
 </div>
 
-<div class="clear"></div>
-<div class="col-10 offset-1">
-	<h1 class="float-left">Comments</h1>
-	<!-- Button trigger modal -->
-	<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
-	  Add a Comment
-	</button>
-</div>
-
-
-<br />
-<br />
 <div class="clear"></div>
 
 
@@ -125,6 +112,18 @@
   <%= image_tag photo.picture %>
   <%= photo.message %>
 <% end %>
+</div>
+
+<div class="clear"></div>
+<br />
+
+<div class="clear"></div>
+<div class="col-10 offset-1">
+	<h1 class="float-left">Comments</h1>
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+	  Add a Comment
+	</button>
 </div>
 
 <div class="clear"></div>
