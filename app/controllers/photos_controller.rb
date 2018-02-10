@@ -8,8 +8,7 @@ class PhotosController < ApplicationController
 	end
 
 	def index
-		@place = Place.find(params[:place_id])
-		redirect_to place_path(@place)
+
 	end	
 
 	private
